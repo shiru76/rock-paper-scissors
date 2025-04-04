@@ -1,0 +1,112 @@
+/* * {
+    border: 1px solid red;
+} */
+
+body {
+    background-color: #fbd165;
+}
+
+.game {
+    background-color: beige;
+    border: 2px solid;
+    margin: 80px;
+    border-radius: 10px;
+}
+
+.header {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4b0bf;
+    text-align: center;    
+}
+
+.score {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 100px 0px 100px; 
+}
+
+#humanScore, #computerScore {
+    font-size: 25px;
+}
+
+.human, .computer, .humanPick, .computerPick {
+    padding: 10px;
+    width: 150px;
+}
+
+.result {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    flex: 1 0 0;
+    min-height: 40px;
+}
+
+.currentPick {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px 0px 100px; 
+}
+
+.options {
+    font-family: 'Courier New', Courier, monospace;
+    align-content: center;
+    text-align: center;
+    height: 150px;
+    flex: 1 0 0; 
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+#rock {
+    background-color: #fbd165;
+}
+
+#paper {
+    background-color: #f4b0bf;
+}
+
+#scissors {
+    background-color: #a9cc8a;
+}
+
+#rock:hover {background-color: #ac8e44}
+
+#paper:hover {background-color: #9f747d}
+
+#scissors:hover {background-color: #718a5c}
+
+#rock:active {
+    background-color: #ac8e44;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#paper:active {
+    background-color: #9f747d;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#scissors:active {
+    background-color: #718a5c;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
