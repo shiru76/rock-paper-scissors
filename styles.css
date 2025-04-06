@@ -9,104 +9,187 @@ body {
 .game {
     background-color: beige;
     border: 2px solid;
-    margin: 80px;
+    margin: 50px 250px 50px 250px;
     border-radius: 10px;
 }
 
-.header {
+.game__header {
     font-family: 'Courier New', Courier, monospace;
     background-color: #f4b0bf;
     text-align: center;    
 }
 
-.score {
+.game__screen {
     font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 0px 50px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(79, 79, 79);
+    color: white;
+}
+
+.game__scoreboard {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;    
+}
+
+.game__player {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 25px;
+    padding: 0px 20px 0px 20px;
+}
+
+.game__score {
+    font-size: 30px;
+}
+
+.game__result{
+    height: 50px;
+}
+
+.game__pick {
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.game__options {
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 0px 100px 0px 100px; 
+    height: 100px;
+    padding: 10px 0px 10px 0px;
 }
 
-#humanScore, #computerScore {
-    font-size: 25px;
+.game__options--main {
+    gap: 20px;
 }
 
-.human, .computer, .humanPick, .computerPick {
-    padding: 10px;
-    width: 150px;
-}
-
-.result {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    flex: 1 0 0;
-    min-height: 40px;
-}
-
-.currentPick {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 100px 0px 100px; 
-}
-
-.options {
+.game__button {
     font-family: 'Courier New', Courier, monospace;
-    align-content: center;
-    text-align: center;
-    height: 150px;
-    flex: 1 0 0; 
-}
-
-button {
-    padding: 15px 25px;
     font-size: 16px;
+    color: black;
+    padding: 15px 25px;
     cursor: pointer;
     text-decoration: none;
     outline: none;
-    color: #fff;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
 }
 
-#rock {
+.game__button--rock {
     background-color: #fbd165;
 }
 
-#paper {
+.game__button--paper {
     background-color: #f4b0bf;
 }
 
-#scissors {
+.game__button--scissors {
     background-color: #a9cc8a;
 }
 
-#rock:hover {background-color: #ac8e44}
-
-#paper:hover {background-color: #9f747d}
-
-#scissors:hover {background-color: #718a5c}
-
-#rock:active {
-    background-color: #ac8e44;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+.game__button--reset {
+    background-color: lightcoral;
 }
 
-#paper:active {
-    background-color: #9f747d;
+.game__button--rock:hover {background-color: #ac8e44}
+
+.game__button--paper:hover {background-color: #9f747d}
+
+.game__button--scissors:hover {background-color: #718a5c}
+
+.game__button--reset:hover {background-color: rgb(172, 92, 92)}
+
+.game__button:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+
+    .game__button--rock:active {
+        background-color: #ac8e44;
+    }
+    
+    .game__button--paper:active {
+        background-color: #9f747d;
+    }
+    
+    .game__button--scissors:active {
+        background-color: #718a5c;
+    }
+
+    .game__button--reset:active {
+        background-color: rgb(172, 92, 92);
+    }    
 }
 
-#scissors:active {
-    background-color: #718a5c;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+/* Modal Overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
 }
+  
+.modal__content {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: beige;
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);    
+    position: relative;
+}
+
+.modal__close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.modal__close:hover {
+    color: #000;
+}
+
+.modal__button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: black;
+    padding: 15px 25px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+
+.modal__button--play {
+    background-color: lightgreen;
+}
+
+.modal__button--play:hover {background-color: rgb(97, 160, 97);}
+
+.modal__button--play:active {background-color: lightgreen;}

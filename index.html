@@ -8,28 +8,45 @@
 </head>
 <body>
     <div class="game">
-        <h1 class="header">Rock, Paper, Scissors</h1>
-        <div class="score">
-            <div class="human">
-                <h3>Human</h3>
-                <h3 id="humanScore">0</h3>
+        <h1 class="game__header">Rock, Paper, Scissors</h1>
+        <div class="game__screen">
+            <div class="game__scoreboard">
+                <div class="game__player game__player--human">
+                    <h3>Human</h3>
+                    <h3 class="game__score game__score--human">0</h3>
+                </div>
+                <div class="game__player game__player--computer">
+                    <h3 class="game__score game__score--computer">0</h3>
+                    <h3>Computer</h3>
+                </div>    
             </div>
-            <div class="result"></div>
-            <div class="computer">
-                <h3>Computer</h3>
-                <h3 id="computerScore">0</h3>
+            <div class="game__result">
             </div>
+            <div class="game__pick">
+                <div class="humanPick"></div>
+                <div class="computerPick"></div>
+            </div>    
         </div>
-        <div class="currentPick">
-            <div class="humanPick"></div>
-            <div class="options">
-                <button id="rock">Rock</button>
-                <button id="paper">Paper</button>
-                <button id="scissors">Scissors</button>
+        <div class="game__options">
+            <div class="game__options game__options--main">
+                <button class="game__button game__button--rock">Rock</button>
+                <button class="game__button game__button--paper">Paper</button>
+                <button class="game__button game__button--scissors">Scissors</button>    
             </div>
-            <div class="computerPick"></div>
+            <div class="game__options game__options--misc">
+                <button class="game__button game__button--reset">Reset</button>
+            </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal modal--hidden">
+        <div class="modal__content">
+            <span class="modal__close" id="closeModalBtn">&times;</span>
+            <!-- <h2 class="modal__title"></h2> -->
+            <p class="modal__text">Thank you for playing!</p>
+            <button class="modal__button modal__button--play">Play again</button>
+        </div>
+    </div>    
     <script src="./game.js"></script>
 </body>
 </html>
